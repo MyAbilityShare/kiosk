@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제품 선택하기</title>
+
+</head>
+<body>
+<h2>제품 선택하기</h2>
+<button onclick="selectProduct()">제품 선택</button>
+
+<div>
+    <h3>선택한 제품 정보</h3>
+    <p>제품명: <span id="product-name"></span></p>
+    <p>수량: <span id="product-quantity"></span></p>
+    <p>가격: $<span id="product-price"></span></p>
+</div>
+<script>
+  // JavaScript 함수를 사용하여 제품을 선택하고 선택한 제품의 정보를 화면에 업데이트합니다.
+  function selectProduct() {
+      // 선택한 제품의 정보를 가져오는 예시입니다.
+      var selectedProduct = {
+          name: "제품명",
+          quantity: 1,
+          price: 1000
+      };
+
+      // 화면에 선택한 제품의 정보를 업데이트합니다.
+      document.getElementById("product-name").innerText = selectedProduct.name;
+      document.getElementById("product-quantity").innerText = selectedProduct.quantity;
+      document.getElementById("product-price").innerText = selectedProduct.price;
+  }
+</script>
+</body>
+</html>
