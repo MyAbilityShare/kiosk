@@ -63,7 +63,7 @@ ul{
   padding-left: 95px;
   background-color: rgb(105, 103, 103);
   color: #f0f0f0;
-  background-image: url(Photo/card.png);
+  background-image: url(card.png);
   background-size: cover;
   background-repeat: no-repeat;
   padding-right: 20px;
@@ -80,3 +80,4 @@ ul{
 #timer{
   font-size: 50px;
 }
+
