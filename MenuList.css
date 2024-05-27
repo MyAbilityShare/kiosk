@@ -1,0 +1,77 @@
+
+body{
+  height: 100vh;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+ul{
+  display: flex;
+}
+.bundle_box2_4{
+  margin-top: -19px;
+  margin-left: 10px;
+}
+.box{
+  width:500px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.box2{
+  width: 300px;
+  height: 130px;
+  margin-left: 27px;
+  display: flex;
+  position: static;
+  border-bottom: 1px solid black;
+  
+}
+.box3{
+  margin-left: 80px;
+  padding: 13px;
+  padding-bottom: 6px;
+  padding-left: 17px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(215, 80, 80);
+  color: #f0f0f0;
+}
+.box4{
+  width: 300px;
+  height: 254px;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+.acpayment{
+  width: 300px;
+  height: 205px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 95px;
+  background-color: rgb(105, 103, 103);
+  color: #f0f0f0;
+  background-image: url(images/card.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-right: 20px;
+ background-size: 80px 80px;
+ background-position: 18% center;
+ 
+}
+
+
+.fontsi{
+  font-size: 25px;
+  font-weight: bold;
+}
