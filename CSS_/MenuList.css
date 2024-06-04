@@ -10,13 +10,23 @@ body {
 
 }
 
-/*스크롤입니다.*/
+/*스크롤*/
 .scrollBar {
   width: 880px;
   height: 600px;
   margin: 0 auto;
  overflow-y: scroll;
+
  }
+ /*스크롤바 없애기*/
+ .scrollBar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.scrollBar::-webkit-scrollbar {
+  display: none; 
+}
+
 
 
 ul {
