@@ -10,7 +10,7 @@ body {
 
 }
 
-/*스크롤 추가*/
+/*메뉴 이미지 스크롤 추가*/
 .scrollBar {
   width: 880px;
   height: 600px;
@@ -18,7 +18,7 @@ body {
  overflow-y: scroll;
 
  }
- /*스크롤바 없애기*/
+ /*메뉴 이미지 스크롤바 없애기*/
  .scrollBar {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
@@ -28,11 +28,11 @@ body {
 }
 
 
-
 ul {
   display: flex;
   padding-left: 5px;
   padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .bundle_box2_4 {
@@ -60,7 +60,7 @@ ul {
   display: flex;
   position: static;
   border-bottom: 1px solid black;
-  margin-top: 280px;  /*초 결제 전체삭제 위치 단체 이동*/
+  margin-top: 40px;  /*초 결제 전체삭제 위치 단체 이동*/
 }
 
 /*코드 살짝 정리*/
@@ -115,22 +115,27 @@ ul {
 
 .selected-menu{
   border: 1px solid #000;
-  /* padding-top: 350px; */
-  margin-top: 307px;
+  margin-top: 65px;
   margin-left: 40px;
   margin-right: 25px;
   width: 480px;
   height: 350px;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 #selected-menu-list{
-  
   width: 450px;
   height: 20px;
   font-size: 30px;
   list-style-type: none;
   padding: 0;
+  display: table;
+  text-align: left;
+  padding: 10px;
 }
+
 li{
-  width: 450px;
+  width: 350px;
 }
+
