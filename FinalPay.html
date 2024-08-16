@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키오스크 결제 화면</title>
+    <link rel="stylesheet" href="CSS/FinalPay.css">
+</head>
+<body>
+    <div class="kiosk-container">
+        <div class="kiosk-content">
+            <div class="payment-method-box">
+            <div>
+            <h1>결제수단 선택</h1>
+            </div>
+            </div>
+        
+            <div class="step">
+                <p>STEP1</p>
+            </div>
+            <h3>제휴 할인을 선택해주세요.</h3> 
+            
+            <div class="discount-options">
+                <div class="discount-option" id="ktDiscount">
+                    <img src="FinalPhoto/kt.jpeg" width="100px" height="40px">
+                    <p>KT VIP 초이스<br>(통합 월 1회)</p>
+                </div>
+                <div class="discount-option" id="tujuDiscount" onclick="selectMethod('SKT우주패스')">
+                    <img src="FinalPhoto/t우주.png" width="100px" height="50px">
+                    <p>SKT우주패스</p>
+                </div>
+                <div class="discount-option" id="cjDiscount">
+                    <img src="FinalPhoto/cj.png" width="100px" height="50px">
+                    <p>CJ ONE 포인트 사용</p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <p>STEP2</p>
+            </div>
+            <h3>결제수단을 선택 해주세요.</h3>
+
+            <div class="payment-options">
+                <div class="payment-option3" id="cardPayment" onclick="selectMethod('카드결제')">
+                    <img src="FinalPhoto/카드.png" width="100px" height="50px">
+                    <p>카드 결제</p>
+                    <h> 삼성페이/LG페이</h>
+                </div>
+                <div class="payment-option3" id="appCardPayment" onclick="selectMethod('앱카드')">
+                    <img src="FinalPhoto/앱카드.png" width="90px" height="60px">
+                    <p>앱카드</p>
+                    <h>OR/바코드</h>
+                </div>
+                <div class="payment-option5" id="Del"></div>
+
+                <div class="payment-option2" id="kakaoPayment" onclick="selectMethod('카카오페이')">
+                    <img src="FinalPhoto/카카오페이.jpg" width="100px" height="50px">
+                    <p>카카오페이</p>
+                    
+                </div>
+                <div class="payment-option2" id="paycoPayment" onclick="selectMethod('페이코')">
+                    <img src="FinalPhoto/페이코.png" width="100px" height="50px">
+                    <p>페이코</p>
+                </div>
+                <div class="payment-option2" id="naverPayment" onclick="selectMethod('네이버페이')">
+                    <img src="FinalPhoto/네이버페이.png" width="100px" height="50px">
+                    <p>네이버페이</p>
+                </div>
+                <div class="payment-option2" id="zeroPayment" onclick="selectMethod('제로페이')">
+                    <img src="FinalPhoto/제로페이.png" width="100px" height="50px">
+                    <p>제로페이</p>
+                </div>
+                <div class="payment-option4" id="bcPayment" onclick="selectMethod('BC페이북')">
+                    <img src="FinalPhoto/bc.png" width="80px" height="45px">
+                    <p>BC페이북</p>
+                </div>
+                <div class="payment-option4" id="hanaPayment" onclick="selectMethod('하나Pay')">
+                    <img src="FinalPhoto/하나.png" width="100px" height="45px">
+                    <p>하나Pay</p>
+                </div>
+                <div class="payment-option4" id="kbPayment" onclick="selectMethod('KB pay')">
+                    <img src="FinalPhoto/KB.png" width="70px" height="50px">
+                    <p>KB Pay</p>
+                </div>
+                <div class="payment-option5" id="Del"></div>
+                <div class="payment-option" id="coupon" onclick="selectMethod('쿠폰사용')">
+                    <img src="FinalPhoto/쿠폰.png" width="80px" height="55px">
+                    <p>쿠폰 사용</p>
+
+                </div>
+                <div class="payment-option" id="megaPayment" onclick="selectMethod('메가 선불페이')">
+                    <img src="FinalPhoto/메가.png" width="100px" height="50px">
+                    <p>메가 선불페이</p>
+                </div>
+                <div class="payment-option" id="CJgiftcardPayment" onclick="selectMethod('CJ기프트카드')">
+                    <img src="FinalPhoto/gift.png" width="90px" height="40px">
+                    <p><br>CJ기프트카드</p>
+                </div>
+                
+            </div>
+            <div></div>
+            <h2>주문 금액 : </h2>
+            <div id="paymentResult"></div>
+        </div>
+        
+    </div>
+    <script src="JS/FinalPay.js"></script>
+</body>
+</html>
