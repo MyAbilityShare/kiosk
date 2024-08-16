@@ -27,5 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
       totalPrice = 0;
       count = 0;
     });
+    
   });
   

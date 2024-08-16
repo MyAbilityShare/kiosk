@@ -8,4 +8,5 @@ let totalAmount = 0;
         totalAmount += price; // totalAmount에 가격을 누적합니다
         selectedItems.innerHTML = `<span id="total-amount">${totalAmount}원</span><br><span id="payment-text">결제하기</span>`; // 'value' 속성을 사용하여 버튼의 텍스트를 변경합니다
       });
+      
     });

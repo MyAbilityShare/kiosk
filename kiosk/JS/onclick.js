@@ -13,5 +13,4 @@ function addFunction(menuName){
   // //줄바꿈
   const lineBreak = document.createElement('br')
   selectedMenuList.appendChild(lineBreak)
-
 }
