@@ -1,0 +1,159 @@
+/* 마진 크기 수정 */
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*메뉴 이미지 스크롤 추가*/
+.scrollBar {
+  width: 880px;
+  height: 600px;
+  margin: 0 auto;
+ overflow-y: scroll;
+
+ }
+ /*메뉴 이미지 스크롤바 없애기*/
+ .scrollBar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.scrollBar::-webkit-scrollbar {
+  display: none; 
+}
+
+
+ul {
+  display: flex;
+  padding-left: 5px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.bundle_box2_4 {
+  height: 0px;
+  padding-top: -100px;
+}
+
+/*박스 크기 수정 및 마진 탑, 레프트, 라이트 추가*/
+#box {/*초 옆에 네모 박스*/
+  width: 490px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 290px; 
+  margin-right: 5px;
+  margin-left: 25px;
+  
+}
+
+/*마진 탑 추가*/
+.box2 { /*초 결제 정리*/
+  width: 300px;
+  height: 130px;
+  display: flex;
+  position: static;
+  border-bottom: 1px solid black;
+  margin-top: 40px;  /*초 결제 전체삭제 위치 단체 이동*/
+}
+
+
+.box3 { /*전체삭제 버튼*/ 
+  margin-left: 80px;
+  padding: 10px;
+  width: 95px;
+  height: 95px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgb(215, 80, 80);
+  color: #f0f0f0;
+  margin-top: 22px;
+ 
+}
+
+.box4 { /*회색 박스(결제하기) 위치*/
+  width: 300px;
+  height: 250px; /*수정*/
+  padding-left: 10px;
+  margin-top: 20px;
+ 
+}
+
+.acpayment { /*회색박스*/
+  width: 290px;
+  height: 163px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(105, 103, 103);
+  color: #f0f0f0;
+  background-image: url(card.png);
+  background-size: 80px 80px;/*카드 사진 크기*/
+  background-repeat: no-repeat;
+  background-position: 13% center; /*카드 사진 배치*/
+  border-radius: 10px;  /*모서리 둥글게*/
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: right;
+  padding-right: 26px;
+  padding-left: 100px;
+  padding-top: 55px;
+  box-sizing: border-box;
+  line-height: 1.2em;
+}
+
+#acpayment span{
+  display: block;
+  margin-bottom: 5px;
+}
+
+#payment-text{
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+}
+
+
+.fontsi {  /*남은 시간/선택한 상품~개/초 폰트 크기*/
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#timer { /*타이머 숫자 크기*/
+  font-size: 50px;
+}
+
+.selected-menu{  /*선택 결과 창 디자인&위치*/
+  border: 1px solid #000;
+  margin-top: 65px;
+  margin-left: 40px;
+  margin-right: 25px;
+  width: 480px;
+  height: 350px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#selected-menu-list{ /*선택 결과 폰트 코드*/
+  width: 500px;
+  height: 20px;
+  font-size: 25px;
+  list-style-type: none;
+  padding: 0;
+  display: table;
+  text-align: left;
+  padding: 10px;
+}
+
+li{
+  width: 350px;
+}
+
