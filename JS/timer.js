@@ -14,6 +14,7 @@ function startCountdown(duration, display){
   }, 1000);
 }
 
+
 window.onload = function () {
   var duration = 120;
   var display = document.querySelector('#timer');

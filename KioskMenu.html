@@ -1,199 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kiosk</title>
-<link rel="stylesheet" href="CSS_/styles.css">
-<link rel="stylesheet" href="CSS_/MenuList.css">
-</head>
-<body>
-<div id="content"> <!--추가-->
-  <div id="wrapper">
-    <div id="menu">
-      <!--active추가-->
-      <div class="category decaf active" onclick="showCategory('decaf')">추천 메뉴</div>
-      <div class="category coffee" onclick="showCategory('coffee')">커피</div>
-      <div class="category smoothie" onclick="showCategory('smoothie')">스무디&프라페</div>
-      <div class="category ade" onclick="showCategory('ade')">에이드&주스</div>
-      <div class="category tea" onclick="showCategory('tea')">티</div>
-      <div class="category dessert" onclick="showCategory('dessert')">디저트</div>
-    </div>
 
-    <div id="menu-items">
-      <div class="item decaf active"> <!--active 추가-->
-        <!-- 추천 메뉴 -->
-        <h2>추천 메뉴</h2>
-        <div class="scrollBar">
-          <p><!--스크롤-->
-        <!--이미지 스타일 지우고 클래스명 지정 후 css로옮김-->
-        <img src="Photo/코코넛커피스무디.png" alt="코코넛커피스무디" class="img" onclick="addFunction('코코넛커피스무디')">
-        <img src="Photo/메가리카노.png" alt="메가리카노" class="img" onclick="addFunction('메가리카노')">
-        <img src="Photo/딸기쿠키프라페.png" alt="딸기쿠키프라페" class="img" onclick="addFunction('딸기쿠키프라페')">
-        <img src="Photo/쿠키프라페.png" alt="쿠키프라페" class="img" onclick="addFunction('쿠키프라페')">
-        <img src="Photo/녹차프라페.png" alt="녹차프라페" class="img" onclick="addFunction('녹차프라페')">
-        <img src="Photo/딸기퐁크러쉬.png" alt="딸기퐁크러쉬" class="img" onclick="addFunction('딸기퐁크러쉬')">
-        <img src="Photo/블루레몬에이드.png" alt="블루레몬에이드" class="img" onclick="addFunction('블루레몬에이드')">
-        <img src="Photo/딸기주스.png" alt="딸기주스" class="img" onclick="addFunction('딸기주스')">
-        <img src="Photo/티라미수케익.png" alt="티라미수케익" class="img" onclick="addFunction('티라미수케익')">
-        <img src="Photo/허니브레드.png" alt="허니브레드" class="img" onclick="addFunction('허니브레드')">
-        <img src="Photo/버터버터소금빵.png" alt="버터버터소금빵" class="img" onclick="addFunction('버터버터소금빵')">
-        <img src="Photo/아이스허니와앙슈.png" alt="아이스허니와앙슈" class="img" onclick="addFunction('아이스허니와앙슈')">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiosk</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/MenuList.css">
+</head>
+
+<body>
+  <div id="content"> <!--추가-->
+    <div id="wrapper">
+      <div id="menu">
+        <!--active추가-->
+        <div class="category decaf active" onclick="showCategory('decaf')">추천 메뉴</div>
+        <div class="category coffee" onclick="showCategory('coffee')">커피</div>
+        <div class="category smoothie" onclick="showCategory('smoothie')">스무디&프라페</div>
+        <div class="category ade" onclick="showCategory('ade')">에이드&주스</div>
+        <div class="category tea" onclick="showCategory('tea')">티</div>
+        <div class="category dessert" onclick="showCategory('dessert')">디저트</div>
       </div>
-       </p><!--스크롤-->
-      </div>
-  </div><!--스크롤-->
- 
+
+      <div id="menu-items">
+        <div class="item decaf active"> <!--active 추가-->
+          <!-- 추천 메뉴 -->
+          <h2>추천 메뉴</h2>
+          <div class="scrollBar">
+            <p><!--스크롤-->
+              <!--이미지 스타일 지우고 클래스명 지정 후 css로옮김-->
+              <img src="Photo/코코넛커피스무디.png" alt="코코넛커피스무디" class="img" onclick="addFunction('코코넛커피스무디 &ensp; 4,800원')"
+                data-price="4800">
+              <img src="Photo/메가리카노.png" alt="메가리카노" class="img"
+                onclick="addFunction('메가리카노 &emsp;&emsp;&emsp;&ensp; 3,000원')" data-price="3000">
+              <img src="Photo/딸기쿠키프라페.png" alt="딸기쿠키프라페" class="img"
+                onclick="addFunction('딸기쿠키프라페 &emsp;&ensp;&ensp;3,900원')" data-price="3900">
+              <img src="Photo/쿠키프라페.png" alt="쿠키프라페" class="img"
+                onclick="addFunction('쿠키프라페  &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+              <img src="Photo/녹차프라페.png" alt="녹차프라페" class="img"
+                onclick="addFunction('녹차프라페  &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+              <img src="Photo/딸기퐁크러쉬.png" alt="딸기퐁크러쉬" class="img"
+                onclick="addFunction('딸기퐁크러쉬  &emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+              <img src="Photo/블루레몬에이드.png" alt="블루레몬에이드" class="img"
+                onclick="addFunction('블루레몬에이드  &emsp;&ensp; 3,500원')" data-price="3500">
+              <img src="Photo/딸기주스.png" alt="딸기주스" class="img"
+                onclick="addFunction('딸기주스 &emsp;&emsp;&emsp;&emsp;&ensp;  3,800원')" data-price="3,800">
+              <img src="Photo/티라미수케익.png" alt="티라미수케익" class="img"
+                onclick="addFunction('티라미수케익 &emsp;&emsp;&ensp; 3,300원')" data-price="3300">
+              <img src="Photo/허니브레드.png" alt="허니브레드" class="img"
+                onclick="addFunction('허니브레드 &emsp;&emsp;&emsp;&ensp; 4,500원')" data-price="4500">
+              <img src="Photo/버터버터소금빵.png" alt="버터버터소금빵" class="img"
+                onclick="addFunction('버터버터소금빵&emsp;&ensp;&ensp;3,200원')" data-price="3200">
+              <img src="Photo/아이스허니와앙슈.png" alt="아이스허니와앙슈" class="img" onclick="addFunction('아이스허니와앙슈&emsp;2,400원')"
+                data-price="2400">
+          </div>
+          </p><!--스크롤-->
+        </div>
+      </div><!--스크롤-->
+
       <div class="item coffee">
         <!-- 커피 메뉴 -->
         <h2>커피 메뉴</h2>
         <div class="scrollBar"><!--스크롤-->
-        <p><!--스크롤-->
-        <img src="Photo/아이스 아메리카노.png" alt="아이스 아메리카노" class="img" onclick="addFunction('아이스 아메리카노')">
-        <img src="Photo/바닐라라떼.png" alt="바닐라라떼" class="img" onclick="addFunction('바닐라라떼')">
-        <img src="Photo/카페라떼.png" alt="카페라떼" class="img" onclick="addFunction('카페라떼')">
-        <img src="Photo/카푸치노.png" alt="카푸치노" class="img" onclick="addFunction('카푸치노')">
-        <img src="Photo/아메리카노.png" alt="아메리카노" class="img" onclick="addFunction('아메리카노')"> 
-        <img src="Photo/카페모카.png" alt="카페모카" class="img" onclick="addFunction('카페모카')">
-        <img src="Photo/카라멜마끼아또.png" alt="카라멜마끼아또" class="img" onclick="addFunction('카라멜마끼아또')">
-        <img src="Photo/에스프레소.png" alt="에스프레소" class="img" onclick="addFunction('에스프레소')">
-        <img src="Photo/콜드브루오리지널.png" alt="콜드브루오리지널" class="img" onclick="addFunction('콜드브루오리지널')">
-        <img src="Photo/큐브라떼.png" alt="큐브라떼" class="img" onclick="addFunction('큐브라떼')">
-        <img src="Photo/헤이즐넛라떼.png" alt="헤이즐넛라떼" class="img" onclick="addFunction('헤이즐넛라떼')">
-        <img src="Photo/콜드브루라떼.png" alt="콜드브루라떼" class="img" onclick="addFunction('콜드브루라떼')">
-        <img src="Photo/티라미수라떼.png" alt="티라미수라떼" class="img" onclick="addFunction('티라미수라떼')">
-        <img src="Photo/에스프레소도피오.png" alt="에스프레소도피오" class="img" onclick="addFunction('에스프레소도피오')">
-        <img src="Photo/디카페인연유라떼.png" alt="디카페인연유라떼" class="img" onclick="addFunction('디카페인연유라떼')">
-        <img src="Photo/메가리카노.png" alt="메가리카노" class="img" onclick="addFunction('디카페인연유라떼')">
-      </div>
-    </p><!--스크롤-->
-  </div><!--스크롤-->
+          <p><!--스크롤-->
+            <img src="Photo/아이스 아메리카노.png" alt="아이스 아메리카노" class="img"
+              onclick="addFunction('아이스 아메리카노&ensp;&nbsp;2,000원')" data-price="2000">
+            <img src="Photo/바닐라라떼.png" alt="바닐라라떼" class="img"
+              onclick="addFunction('바닐라라떼 &emsp;&emsp;&emsp;&ensp; 3,200원')" data-price="3200">
+            <img src="Photo/카페라떼.png" alt="카페라떼" class="img"
+              onclick="addFunction('카페라떼 &emsp;&emsp;&emsp;&emsp;&ensp;  2,700원')" data-price="2700">
+            <img src="Photo/카푸치노.png" alt="카푸치노" class="img"
+              onclick="addFunction('카푸치노 &emsp;&emsp;&emsp;&emsp;&ensp;  2,700원')" data-price="2700">
+            <img src="Photo/아메리카노.png" alt="아메리카노" class="img"
+              onclick="addFunction('아메리카노 &emsp;&emsp;&emsp;&ensp; 1,500원')" data-price="1500">
+            <img src="Photo/카페모카.png" alt="카페모카" class="img"
+              onclick="addFunction('카페모카 &emsp;&emsp;&emsp;&emsp;&ensp;  3,700원')" data-price="3700">
+            <img src="Photo/카라멜마끼아또.png" alt="카라멜마끼아또" class="img" onclick="addFunction('카라멜마끼아또  &emsp;&ensp; 3,500원')"
+              data-price="3500">
+            <img src="Photo/에스프레소.png" alt="에스프레소" class="img"
+              onclick="addFunction('에스프레소 &emsp;&emsp;&emsp;&ensp; 1,500원')" data-price="1500">
+            <img src="Photo/콜드브루오리지널.png" alt="콜드브루오리지널" class="img" onclick="addFunction('콜드브루오리지널&emsp;3,300원')"
+              data-price="3300">
+            <img src="Photo/큐브라떼.png" alt="큐브라떼" class="img"
+              onclick="addFunction('큐브라떼 &emsp;&emsp;&emsp;&emsp;&ensp;  3,900원')" data-price="3900">
+            <img src="Photo/헤이즐넛라떼.png" alt="헤이즐넛라떼" class="img"
+              onclick="addFunction('헤이즐넛라떼 &emsp;&emsp;&ensp; 3,200원')" data-price="3200">
+            <img src="Photo/콜드브루라떼.png" alt="콜드브루라떼" class="img"
+              onclick="addFunction('콜드브루라떼 &emsp;&emsp;&ensp; 3,800원')" data-price="3800">
+            <img src="Photo/티라미수라떼.png" alt="티라미수라떼" class="img"
+              onclick="addFunction('티라미수라떼 &emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+            <img src="Photo/에스프레소도피오.png" alt="에스프레소도피오" class="img" onclick="addFunction('에스프레소도피오&emsp;2,000원')"
+              data-price="2000">
+            <img src="Photo/디카페인연유라떼.png" alt="디카페인연유라떼" class="img" onclick="addFunction('디카페인연유라떼&emsp;3,700원')"
+              data-price="3700">
+            <img src="Photo/메가리카노.png" alt="메가리카노" class="img"
+              onclick="addFunction('메가리카노 &emsp;&emsp;&emsp;&ensp; 3,000원')" data-price="3000">
+        </div>
+        </p><!--스크롤-->
+      </div><!--스크롤-->
 
 
       <div class="item smoothie">
         <!-- 스무디&프라페 메뉴 -->
         <h2>스무디&프라페 메뉴</h2>
         <div class="scrollBar"><!--스크롤-->
-        <p><!--스크롤-->
-        <img src="Photo/리얼초코프라페.png" alt="리얼초코프라페" class="img" onclick="addFunction('리얼초코프라페')">
-        <img src="Photo/딸기쿠키프라페.png" alt="딸기쿠키프라페" class="img" onclick="addFunction('딸기쿠키프라페')">
-        <img src="Photo/유니콘프라페.png" alt="유니콘프라페" class="img" onclick="addFunction('유니콘프라페')">
-        <img src="Photo/쿠키프라페.png" alt="쿠키프라페" class="img" onclick="addFunction('쿠키프라페')">
-        <img src="Photo/녹차프라페.png" alt="녹차프라페" class="img" onclick="addFunction('녹차프라페')">
-        <img src="Photo/딸기요거트스무디.png" alt="딸기요거트스무디" class="img" onclick="addFunction('딸기요거트스무디')">
-        <img src="Photo/망고요거트스무디.png" alt="망고요거트스무디" class="img" onclick="addFunction('망고요거트스무디')">
-        <img src="Photo/골드망고스무디.png" alt="골드망고스무디" class="img" onclick="addFunction('골드망고스무디')">
-        <img src="Photo/바나나퐁크러쉬.png" alt="바나나퐁크러쉬" class="img" onclick="addFunction('바나나퐁크러쉬')">
-        <img src="Photo/초코허니퐁크러쉬.png" alt="초코허니퐁크러쉬" class="img" onclick="addFunction('초코허니퐁크러쉬')">
-        <img src="Photo/딸기퐁크러쉬.png" alt="딸기퐁크러쉬" class="img" onclick="addFunction('딸기퐁크러쉬')">
-        <img src="Photo/플레인퐁크러쉬.png" alt="플레인퐁크러쉬" class="img" onclick="addFunction('플레인퐁크러쉬')">
-        <img src="Photo/플레인요거트스무디.png" alt="플레인요거트스무디" class="img" onclick="addFunction('플레인요거트스무디')">
-        <img src="Photo/코코넛커피스무디.png" alt="코코넛커피스무디" class="img" onclick="addFunction('코코넛커피스무디')">
-        <img src="Photo/민트프라페.png" alt="민트프라페" class="img" onclick="addFunction('민트프라페')">
-        <img src="Photo/커피프라페.png" alt="커피프라페" class="img" onclick="addFunction('커피프라페')">
-      </div>
-    </p><!--스크롤-->
-  </div><!--스크롤-->
+          <p><!--스크롤-->
+            <img src="Photo/리얼초코프라페.png" alt="리얼초코프라페" class="img" onclick="addFunction('리얼초코프라페  &emsp;&ensp; 3,900원')"
+              data-price="3900">
+            <img src="Photo/딸기쿠키프라페.png" alt="딸기쿠키프라페" class="img" onclick="addFunction('딸기쿠키프라페  &emsp;&ensp; 3,900원')"
+              data-price="3900">
+            <img src="Photo/유니콘프라페.png" alt="유니콘프라페" class="img"
+              onclick="addFunction('유니콘프라페 &emsp;&emsp;&ensp; 4,800원')" data-price="4800">
+            <img src="Photo/쿠키프라페.png" alt="쿠키프라페" class="img"
+              onclick="addFunction('쿠키프라페 &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+            <img src="Photo/녹차프라페.png" alt="녹차프라페" class="img"
+              onclick="addFunction('녹차프라페 &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+            <img src="Photo/딸기요거트스무디.png" alt="딸기요거트스무디" class="img" onclick="addFunction('딸기요거트스무디&emsp;3,900원')"
+              data-price="3900">
+            <img src="Photo/망고요거트스무디.png" alt="망고요거트스무디" class="img" onclick="addFunction('망고요거트스무디&emsp;3,900원')"
+              data-price="3900">
+            <img src="Photo/골드망고스무디.png" alt="골드망고스무디" class="img"
+              onclick="addFunction('골드망고스무디&emsp;&ensp;&ensp;3,900원')" data-price="3900">
+            <img src="Photo/바나나퐁크러쉬.png" alt="바나나퐁크러쉬" class="img"
+              onclick="addFunction('바나나퐁크러쉬&emsp;&ensp;&ensp;3,900원')" data-price="3900">
+            <img src="Photo/초코허니퐁크러쉬.png" alt="초코허니퐁크러쉬" class="img" onclick="addFunction('초코허니퐁크러쉬&emsp;3,900원')"
+              data-price="3900">
+            <img src="Photo/딸기퐁크러쉬.png" alt="딸기퐁크러쉬" class="img"
+              onclick="addFunction('딸기퐁크러쉬 &emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+            <img src="Photo/플레인퐁크러쉬.png" alt="플레인퐁크러쉬" class="img"
+              onclick="addFunction('플레인퐁크러쉬&emsp;&ensp;&ensp;3,900원')" data-price="3900">
+            <img src="Photo/플레인요거트스무디.png" alt="플레인요거트스무디" class="img" onclick="addFunction('플레인요거트스무디&ensp;3,900원')"
+              data-price="3900">
+            <img src="Photo/코코넛커피스무디.png" alt="코코넛커피스무디" class="img" onclick="addFunction('코코넛커피스무디&emsp;3,900원')"
+              data-price="3900">
+            <img src="Photo/민트프라페.png" alt="민트프라페" class="img"
+              onclick="addFunction('민트프라페 &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+            <img src="Photo/커피프라페.png" alt="커피프라페" class="img"
+              onclick="addFunction('커피프라페 &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+        </div>
+        </p><!--스크롤-->
+      </div><!--스크롤-->
 
       <div class="item ade">
         <!-- 에이드&주스 메뉴 -->
         <h2>에이드&주스 메뉴</h2>
         <div class="scrollBar"><!--스크롤-->
           <p><!--스크롤-->
-        <img src="Photo/블루레몬에이드.png" alt="블루레몬에이드" class="img" onclick="addFunction('블루레몬에이드')">
-        <img src="Photo/라임모히또.png" alt="라임모히또" class="img" onclick="addFunction('라임모히또')">
-        <img src="Photo/자몽에이드.png" alt="자몽에이드" class="img" onclick="addFunction('자몽에이드')">
-        <img src="Photo/레몬에이드.png" alt="레몬에이드" class="img" onclick="addFunction('레몬에이드')">
-        <img src="Photo/딸기주스.png" alt="딸기주스" class="img" onclick="addFunction('딸기주스')">
-        <img src="Photo/레드오렌지자몽주스.png" alt="레드오렌지자몽주스" class="img" onclick="addFunction('레드오렌지자몽주스')">
-        <img src="Photo/딸기바나나주스.png" alt="딸기바나나주스" class="img" onclick="addFunction('딸기바나나주스')">
-        <img src="Photo/청포도에이드.png" alt="청포도에이드" class="img" onclick="addFunction('청포도에이드')">
-        <img src="Photo/체리콕.png" alt="체리콕" class="img" onclick="addFunction('체리콕')">
-        <img src="Photo/샤인머스캣그린주스.png" alt="샤인머스캣그린주스" class="img" onclick="addFunction('샤인머스캣그린주스')">
-        <img src="Photo/유니콘매직에이드.png" alt="유니콘매직에이드" class="img" onclick="addFunction('유니콘매직에이드')">
-        <img src="Photo/메가에이드.png" alt="메가에이드" class="img" onclick="addFunction('메가에이드')">
-      </div>
-    </p><!--스크롤-->
-  </div><!--스크롤-->
-  
+            <img src="Photo/블루레몬에이드.png" alt="블루레몬에이드" class="img"
+              onclick="addFunction('블루레몬에이드&emsp;&ensp;&ensp;3,500원')" data-price="3500">
+            <img src="Photo/라임모히또.png" alt="라임모히또" class="img"
+              onclick="addFunction('라임모히또 &emsp;&emsp;&emsp;&ensp; 3,800원')" data-price="3800">
+            <img src="Photo/자몽에이드.png" alt="자몽에이드" class="img"
+              onclick="addFunction('자몽에이드 &emsp;&emsp;&emsp;&ensp; 3,500원')" data-price="3500">
+            <img src="Photo/레몬에이드.png" alt="레몬에이드" class="img"
+              onclick="addFunction('레몬에이드 &emsp;&emsp;&emsp;&ensp; 3,500원')" data-price="3500">
+            <img src="Photo/딸기주스.png" alt="딸기주스" class="img"
+              onclick="addFunction('딸기주스 &emsp;&emsp;&emsp;&emsp;&ensp;  3,800원')" data-price="3800">
+            <img src="Photo/레드오렌지자몽주스.png" alt="레드오렌지자몽주스" class="img"
+              onclick="addFunction('레드오렌지자몽주스&ensp;&nbsp;4,000원')" data-price="4000">
+            <img src="Photo/딸기바나나주스.png" alt="딸기바나나주스" class="img"
+              onclick="addFunction('딸기바나나주스&emsp;&ensp;&ensp;3,800원')" data-price="3800">
+            <img src="Photo/청포도에이드.png" alt="청포도에이드" class="img"
+              onclick="addFunction('청포도에이드 &emsp;&emsp;&ensp; 3,500원')" data-price="3500">
+            <img src="Photo/체리콕.png" alt="체리콕" class="img"
+              onclick="addFunction('체리콕  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;   3,000원')" data-price="3000">
+            <img src="Photo/샤인머스캣그린주스.png" alt="샤인머스캣그린주스" class="img"
+              onclick="addFunction('샤인머스캣그린주스&ensp;&nbsp;4,000원')" data-price="4000">
+            <img src="Photo/유니콘매직에이드.png" alt="유니콘매직에이드" class="img" onclick="addFunction('유니콘매직에이드&emsp;3,500원')"
+              data-price="3500">
+            <img src="Photo/메가에이드.png" alt="메가에이드" class="img"
+              onclick="addFunction('메가에이드 &emsp;&emsp;&emsp;&ensp; 3,900원')" data-price="3900">
+        </div>
+        </p><!--스크롤-->
+      </div><!--스크롤-->
+
       <div class="item tea">
         <!-- 티 메뉴 -->
         <h2>티 메뉴</h2>
         <div class="scrollBar"> <!--스크롤-->
           <p><!--스크롤-->
-        <img src="Photo/녹차.png" alt="녹차" class="img" onclick="addFunction('녹차')">
-        <img src="Photo/레몬차ice.png" alt="레몬차ice" class="img" onclick="addFunction('레몬차ice')">
-        <img src="Photo/레몬차hot.png" alt="레몬차hot" class="img" onclick="addFunction('레몬차hot')">
-        <img src="Photo/제로복숭아아이스티.png" alt="제로복숭아아이스티" class="img" onclick="addFunction('제로복숭아아이스티')">
-        <img src="Photo/자몽차.png" alt="자몽차" class="img" onclick="addFunction('자몽차')">
-        <img src="Photo/허니자몽블랙티.png" alt="허니자몽블랙티" class="img" onclick="addFunction('허니자몽블랙티')">
-        <img src="Photo/유자차.png" alt="유자차" class="img" onclick="addFunction('유자차')">
-        <img src="Photo/얼그레이.png" alt="얼그레이" class="img" onclick="addFunction('얼그레이')">
-        <img src="Photo/사과유자차.png" alt="사과유자차" class="img" onclick="addFunction('사과유자차')">
-        <img src="Photo/캐모마일.png" alt="캐모마일" class="img" onclick="addFunction('캐모마일')">
-        <img src="Photo/페퍼민트.png" alt="페퍼민트" class="img" onclick="addFunction('페퍼민트')">
-        <img src="Photo/왕메가아이스티.png" alt="왕메가아이스티" class="img" onclick="addFunction('왕메가아이스티')">
-        
- 
-      </div>
-    </p><!--스크롤-->
-  </div><!--스크롤-->
+            <img src="Photo/녹차.png" alt="녹차" class="img"
+              onclick="addFunction('녹차  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;   2,500원')" data-price="2500">
+            <img src="Photo/레몬차ice.png" alt="레몬차ice" class="img"
+              onclick="addFunction('레몬차ice &emsp;&emsp;&ensp; 3,000원')" data-price="3000">
+            <img src="Photo/레몬차hot.png" alt="레몬차hot" class="img"
+              onclick="addFunction('레몬차hot &emsp;&emsp;&ensp; 3,000원')" data-price="3000">
+            <img src="Photo/제로복숭아아이스티.png" alt="제로복숭아아이스티" class="img" onclick="addFunction('제로복숭아아이스티&ensp;3,000원')"
+              data-price="3000">
+            <img src="Photo/자몽차.png" alt="자몽차" class="img"
+              onclick="addFunction('자몽차  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  3,000원')" data-price="3000">
+            <img src="Photo/허니자몽블랙티.png" alt="허니자몽블랙티" class="img"
+              onclick="addFunction('허니자몽블랙티&emsp;&ensp;&ensp;3,500원')" data-price="3500">
+            <img src="Photo/유자차.png" alt="유자차" class="img"
+              onclick="addFunction('유자차  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  3,000원')" data-price="3000">
+            <img src="Photo/얼그레이.png" alt="얼그레이" class="img"
+              onclick="addFunction('얼그레이 &emsp;&emsp;&emsp;&emsp;&ensp;  2,500원')" data-price="2500">
+            <img src="Photo/사과유자차.png" alt="사과유자차" class="img"
+              onclick="addFunction('사과유자차 &emsp;&emsp;&emsp;&ensp; 3,500원')" data-price="3500">
+            <img src="Photo/캐모마일.png" alt="캐모마일" class="img"
+              onclick="addFunction('캐모마일 &emsp;&emsp;&emsp;&emsp;&ensp;  2,500원')" data-price="2500">
+            <img src="Photo/페퍼민트.png" alt="페퍼민트" class="img"
+              onclick="addFunction('페퍼민트 &emsp;&emsp;&emsp;&emsp;&ensp;  2,500원')" data-price="2500">
+            <img src="Photo/왕메가아이스티.png" alt="왕메가아이스티" class="img"
+              onclick="addFunction('왕메가아이스티&emsp;&ensp;&ensp;3,500원')" data-price="3500">
+
+
+        </div>
+        </p><!--스크롤-->
+      </div><!--스크롤-->
 
       <div class="item dessert">
         <!-- 디저트 메뉴 -->
         <h2>디저트 메뉴</h2>
         <div class="scrollBar"><!--스크롤-->
           <p><!--스크롤-->
-        <img src="Photo/초코무스케익.png" alt="초코무스케익" class="img" onclick="addFunction('초코무스케익')">
-        <img src="Photo/티라미수케익.png" alt="티라미수케익" class="img" onclick="addFunction('티라미수케익')">
-        <img src="Photo/허니브레드.png" alt="허니브레드" class="img" onclick="addFunction('허니브레드')">
-        <img src="Photo/버터버터소금빵.png" alt="버터버터소금빵" class="img" onclick="addFunction('버터버터소금빵')">
-        <img src="Photo/아이스허니와앙슈.png" alt="아이스허니와앙슈" class="img" onclick="addFunction('아이스허니와앙슈')">
-        <img src="Photo/아이스 딸기라떼 와앙 슈.png" alt="아이스 딸기라떼 와왕 슈" class="img" onclick="addFunction('아이스 딸기라떼 와왕 슈')">
-        <img src="Photo/초코스모어쿠키.png" alt="초코스모어쿠키" class="img" onclick="addFunction('초코스모어쿠키')">
-        <img src="Photo/말차스모어쿠키.png" alt="말차스모어쿠키" class="img" onclick="addFunction('말차스모어쿠키')">
-        <img src="Photo/대파송송치즈감자빵.png" alt="대파송송치즈감자빵" class="img" onclick="addFunction('대파송송치즈감자빵')">
-        <img src="Photo/버터버터뜯어먹는식빵.png" alt="버터버터뜯어먹는식빵" class="img" onclick="addFunction('버터버터뜯어먹는식빵')">
-        <img src="Photo/버터버터마늘크로크무슈.png" alt="버터버터마늘크로크무슈" class="img" onclick="addFunction('버터버터마늘크로크무슈')">
-        <img src="Photo/버터버터에그베이컨샌드위치.png" alt="버터버터에그베이컨샌드위치" class="img" onclick="addFunction('버터버터에그베이컨샌드위치')">
-        <img src="Photo/크루아상&주에그잼.png" alt="크루아상&주에그잼" class="img" onclick="addFunction('크루아상&주에그잼')">
-        <img src="Photo/플레인크로플.png" alt="플레인크로플" class="img" onclick="addFunction('플레인크로플')">
-        <img src="Photo/초코젤라또크로플.png" alt="초코젤라또크로플" class="img" onclick="addFunction('초코젤라또크로플')">
-        <img src="Photo/핫도그.png" alt="핫도그" class="img" onclick="addFunction('핫도그')">
-     
-      </div>
-    </p><!--스크롤-->
-  </div><!--스크롤-->
-    </div>
- 
+            <img src="Photo/초코무스케익.png" alt="초코무스케익" class="img"
+              onclick="addFunction('초코무스케익 &emsp;&emsp;&ensp; 3,300원')" data-price="3300">
+            <img src="Photo/티라미수케익.png" alt="티라미수케익" class="img"
+              onclick="addFunction('티라미수케익 &emsp;&emsp;&ensp; 3,300원')" data-price="3300">
 
-  
-  <ul id="footer"> <!--ul 이름 지정-->
-    <div  class="selected-menu">
-      <ul id="selected-menu-list"></ul>  <!-- 선택한 메뉴를 표시할 리스트 -->
+            <img src="Photo/허니브레드.png" alt="허니브레드" class="img"
+              onclick="addFunction('허니브레드 &emsp;&emsp;&emsp;&ensp; 4,500원')" data-price="4500">
+            <img src="Photo/버터버터소금빵.png" alt="버터버터소금빵" class="img"
+              onclick="addFunction('버터버터소금빵&emsp;&ensp;&ensp; 3,200원')" data-price="3200">
+            <img src="Photo/아이스허니와앙슈.png" alt="아이스허니와앙슈" class="img" onclick="addFunction('아이스허니와앙슈&emsp;2,400원')"
+              data-price="2400">
+            <img src="Photo/아이스 딸기라떼 와앙 슈.png" alt="아이스 딸기라떼 와왕 슈" class="img"
+              onclick="addFunction('아이스딸기라떼와왕슈 2,400원')" data-price="2400">
+            <img src="Photo/초코스모어쿠키.png" alt="초코스모어쿠키" class="img"
+              onclick="addFunction('초코스모어쿠키&emsp;&ensp;&ensp;3,300원')" data-price="3300">
+            <img src="Photo/말차스모어쿠키.png" alt="말차스모어쿠키" class="img"
+              onclick="addFunction('말차스모어쿠키&emsp;&ensp;&ensp;3,300원')" data-price="3300">
+            <img src="Photo/대파송송치즈감자빵.png" alt="대파송송치즈감자빵" class="img"
+              onclick="addFunction('대파송송치즈감자빵&ensp;&nbsp;3,200원')" data-price="3200">
+            <img src="Photo/버터버터뜯어먹는식빵.png" alt="버터버터뜯어먹는식빵" class="img" onclick="addFunction('버터뜯어먹는식빵  &emsp;2,900원')"
+              data-price="2900">
+            <img src="Photo/버터버터마늘크로크무슈.png" alt="버터버터마늘크로크무슈" class="img" onclick="addFunction('버터마늘크로크무슈  3,600원')"
+              data-price="3600">
+            <img src="Photo/버터버터에그베이컨샌드위치.png" alt="버터버터에그베이컨샌드위치" class="img" onclick="addFunction('에그베이컨샌드위치 3,800원')"
+              data-price="3800">
+            <img src="Photo/크루아상&주에그잼.png" alt="크루아상&주에그잼" class="img" onclick="addFunction('크루아상&주에그잼 4,700원')"
+              data-price="4700">
+            <img src="Photo/플레인크로플.png" alt="플레인크로플" class="img"
+              onclick="addFunction('플레인크로플 &emsp;&emsp;&ensp; 3,300원')" data-price="3300">
+            <img src="Photo/초코젤라또크로플.png" alt="초코젤라또크로플" class="img" onclick="addFunction('초코젤라또크로플&emsp;3,500원')"
+              data-price="3500">
+            <img src="Photo/핫도그.png" alt="핫도그" class="img"
+              onclick="addFunction('핫도그  &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  2,200원')" data-price="2200">
+
+        </div>
+        </p><!--스크롤-->
+      </div><!--스크롤-->
     </div>
-    <div class="bundle_box2_4">
-      <div class="box2">
-        <p class="fontsi">남은 시간<br> <span id="timer"></span> 초</p>
-        <input type="button" value="전체
+
+    <ul id="footer"> <!--ul 이름 지정-->
+      <div class="selected-menu">
+        <ul id="selected-menu-list"></ul> <!-- 선택한 메뉴를 표시할 리스트 -->
+      </div>
+      <div class="bundle_box2_4">
+        <div class="box2">
+          <p class="fontsi">남은 시간<br> <span id="timer"></span> 초</p>
+          <input type="button" value="전체
 삭제" class="box3" id="delect-message">
+        </div>
+        <div class="box4">
+          <p class="fontsi">선택한 상품 &emsp;&emsp;&emsp;&emsp;개</p>
+
+          <div id="selected-items" class="acpayment"> <!--토탈 금액 (원 결제하기) 코드-->
+            <span id="total-amount">0원</span>
+            <br>
+            <span id="payment-text">결제하기</span>
+          </div>
+        </div>
       </div>
-      <div class="box4">
-        <p class="fontsi">선택한 상품 &emsp;&emsp;&emsp;&emsp;개</p>
-        <input type="button" value="             원
-  결제하기" class="acpayment" id="pay-message">
-      </div>
-    </div>
-  </ul>
-</div>
-</div>
+    </ul>
+  </div>
+  </div>
 
 
-<script src="JS_/change.js"></script>
-<script src="JS_/payment.js"></script> 
-<script src="JS_/timer.js"></script> 
-<script src="JS_/onclick.js"></script>
+  <script src="JS/change.js"></script>
+  <script src="JS/payment.js"></script>
+  <script src="JS/timer.js"></script>
+  <script src="JS/onclick.js"></script>
+  <script src="JS/total_price.js"></script>
+
 
 
 </body>
+
 </html>
